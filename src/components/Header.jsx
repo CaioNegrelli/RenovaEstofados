@@ -2,7 +2,7 @@ import logoBadge from '../assets/logo-badge.jpeg'
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between gap-6 border-b border-slate-200 bg-white px-6 py-3 md:px-12">
+    <header className="sticky top-0 z-50 flex items-center justify-between gap-6 bg-[] px-6 py-3 md:px-12">
       <div className="flex items-center gap-3">
         <img
           src={logoBadge}

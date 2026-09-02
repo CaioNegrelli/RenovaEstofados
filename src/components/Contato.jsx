@@ -12,7 +12,11 @@ function Contato() {
   return (
     <section id="contato" className="bg-slate-50 px-6 py-16 md:px-12">
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-3xl font-extrabold text-brand-blue md:text-4xl">Fale Conosco</h2>
+        <div className="flex items-center justify-center gap-4">
+          <span className="h-px flex-1 bg-slate-300" />
+          <h2 className="text-3xl font-extrabold text-brand-blue md:text-4xl">Fale Conosco</h2>
+          <span className="h-px flex-1 bg-slate-300" />
+        </div>
         <p className="mt-2 text-brand-blue">Entre em contato conosco para mais informações!</p>
       </div>
 
@@ -39,9 +43,9 @@ function Contato() {
               <FacebookIcon className="h-5 w-5 text-brand-green" />
               Renova Estofados
             </div>
-            <div className="flex items-center gap-2">
-              <MailIcon className="h-5 w-5 text-brand-green" />
-              xxxxx@renovaestofados.com
+            <div className="flex min-w-0 items-center gap-2">
+              <MailIcon className="h-5 w-5 shrink-0 text-brand-green" />
+              <span className="break-all">xxxxx@renovaestofados.com</span>
             </div>
             <div className="col-span-2 flex items-center gap-2">
               <ClockIcon className="h-5 w-5 shrink-0 text-brand-green" />

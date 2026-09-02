@@ -7,3 +7,40 @@
   --color-brand-green: #6fa61c;
   --color-brand-lime: #a8d94a;
 }
+
+@keyframes bubble-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(0.96);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bubble-ring {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-bubble-pop {
+  animation: bubble-pop 560ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.animate-bubble-ring {
+  animation: bubble-ring 560ms ease-out both;
+}
