@@ -1,11 +1,16 @@
+import logoBadge from '../assets/logo-badge.jpeg'
 import { FacebookIcon, InstagramIcon, MailIcon } from './icons'
 
 function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-brand-blue px-6 py-12 text-white md:px-12">
+    <footer className="relative overflow-hidden bg-gradient-to-br from-brand-navy via-brand-blue to-brand-cyan px-6 py-12 text-white md:px-12">
       <div className="relative mx-auto grid max-w-6xl gap-8 md:grid-cols-[auto_1fr_1fr] md:items-start">
-        <div className="mx-auto flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-white/90 text-center text-xs font-semibold text-brand-navy">
-          Logo
+        <div className="mx-auto flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-white p-1 shadow-lg">
+          <img
+            src={logoBadge}
+            alt="Renova Estofados"
+            className="h-full w-full rounded-full object-cover"
+          />
         </div>
 
         <div>
@@ -41,6 +46,10 @@ function Footer() {
           </a>
         </div>
       </div>
+
+      <p className="relative mx-auto mt-8 max-w-6xl border-t border-white/20 pt-4 text-center text-xs text-white/60">
+        © {new Date().getFullYear()} Renova Estofados. Todos os direitos reservados.
+      </p>
     </footer>
   )
 }

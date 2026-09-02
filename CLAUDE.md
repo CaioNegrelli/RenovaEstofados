@@ -7,9 +7,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Renova Estofados — a single-page marketing landing page for a company that provides upholstery
 (estofados) cleaning/sanitization services. No backend; the scope is one static-content page.
 
-Design source: a Figma prototype exported as a screenshot at `design/landing-page-full.png`. The
-prototype template itself is a generic real-estate UI kit repurposed for this brand — treat its
-copy/imagery as a layout reference only, not literal content.
+Design source: the original Figma prototype screenshot is kept at `design/landing-page-full.png`
+for historical reference, but the page has since diverged from it — it was redesigned around the
+client's real logo and brand palette (see `src/assets/logo-light.jpeg` and
+`src/assets/logo-badge.jpeg`), with layout/content patterns borrowed from common upholstery/carpet
+cleaning landing pages rather than the Figma file (whose UI kit was actually a generic real-estate
+template repurposed for this brand). Treat the current component code, not the Figma screenshot, as
+the source of truth for layout.
 
 ## Commands
 
@@ -24,21 +28,30 @@ copy/imagery as a layout reference only, not literal content.
 - Tailwind CSS v4, wired in via the `@tailwindcss/vite` plugin (see `vite.config.js`). Tailwind is
   imported with `@import "tailwindcss";` in `src/index.css` — no `tailwind.config.js` in v4.
 - Brand colors are defined as custom Tailwind tokens in `src/index.css` under `@theme`:
-  `brand-blue`, `brand-navy`, `brand-green`, `brand-lime`. Use these (`bg-brand-blue`,
-  `text-brand-green`, etc.) instead of ad-hoc hex values so the palette stays consistent with the
-  Figma design.
+  `brand-navy`, `brand-blue`, `brand-cyan`, `brand-green`, `brand-lime`. These were sampled directly
+  from the client's logo files, not picked freehand — use them (`bg-brand-blue`, `text-brand-green`,
+  etc.) instead of ad-hoc hex values so the palette stays consistent with the logo.
 
 ## Structure
 
 `src/App.jsx` composes one component per landing-page section, in `src/components/`, in this
-order: `Header`, `Hero`, `Diferenciais`, `QuemSomos`, `Servicos`, `Contato`, `Footer`. Shared
-inline SVG icons (phone, instagram, facebook, mail, clock, whatsapp) live in
-`src/components/icons.jsx`.
+order: `Header`, `Hero`, `Diferenciais`, `QuemSomos`, `Servicos`, `ComoFunciona`, `Contato`,
+`Footer`. Shared inline SVG icons (phone, instagram, facebook, mail, clock, whatsapp, sofa,
+armchair, bed, rug, sparkles, check, calendar, thumbs-up) live in `src/components/icons.jsx`.
+
+Two logo variants are used purposefully in different spots, not interchangeably:
+`logo-light.jpeg` (detailed emblem: sofa + vacuum + wordmark) in the Hero; `logo-badge.jpeg`
+(compact circular seal with service icons) everywhere else (Header, QuemSomos, Contato, Footer,
+favicon). Both are displayed via `rounded-full object-cover` to clip their square canvas into a
+circle — keep that pattern if you reuse them elsewhere.
+
+`Servicos` lists four cards (Sofá, Poltrona, Cama, Tapete) matching the four service icons printed
+on the badge logo — don't silently collapse them back into three without checking the logo.
 
 ## Known gaps
 
-Real photography and the actual logo mark from Figma haven't been exported individually yet — the
-page currently uses labeled placeholder blocks (e.g. "Logo Renova Estofados", "Foto do serviço de
-higienização") everywhere the design calls for an image. When real assets are exported from Figma,
-drop them in `src/assets/` and swap them into the relevant component. Contact details (phone,
-e-mail, WhatsApp number, CNPJ) are also placeholders (`XX`/`xxxxx`) pending real business info.
+- No real photography exists yet for the services/differentiators — those spots use custom SVG
+  icons and gradient circles in the brand palette instead of photos. When real photos are
+  available, they can replace the icon placeholders in `Diferenciais.jsx` and `Servicos.jsx`.
+- Contact details (phone, e-mail, WhatsApp number, CNPJ, business hours) are still placeholders
+  (`XX`/`xxxxx`) pending real business info — search the codebase for those before shipping.

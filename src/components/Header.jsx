@@ -1,9 +1,17 @@
+import logoBadge from '../assets/logo-badge.jpeg'
+
 function Header() {
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between gap-6 border-b border-slate-200 bg-white px-6 py-4 md:px-12">
-      <div className="flex items-center gap-2">
-        <div className="h-9 w-9 shrink-0 rounded-full bg-brand-navy" aria-hidden="true" />
-        <span className="text-lg font-bold text-brand-navy">Renova</span>
+    <header className="sticky top-0 z-50 flex items-center justify-between gap-6 border-b border-slate-200 bg-white px-6 py-3 md:px-12">
+      <div className="flex items-center gap-3">
+        <img
+          src={logoBadge}
+          alt="Renova Estofados"
+          className="h-11 w-11 shrink-0 rounded-full object-cover ring-2 ring-brand-navy/10"
+        />
+        <span className="text-lg font-bold text-brand-navy">
+          Renova <span className="text-brand-green">Estofados</span>
+        </span>
       </div>
 
       <nav className="hidden items-center gap-8 text-sm font-medium text-slate-700 md:flex">

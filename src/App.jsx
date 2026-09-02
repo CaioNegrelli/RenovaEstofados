@@ -1,3 +1,4 @@
+import ComoFunciona from './components/ComoFunciona'
 import Contato from './components/Contato'
 import Diferenciais from './components/Diferenciais'
 import Footer from './components/Footer'
@@ -15,6 +16,7 @@ function App() {
         <Diferenciais />
         <QuemSomos />
         <Servicos />
+        <ComoFunciona />
         <Contato />
       </main>
       <Footer />

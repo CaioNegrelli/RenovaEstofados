@@ -1,3 +1,4 @@
+import logoBadge from '../assets/logo-badge.jpeg'
 import {
   ClockIcon,
   FacebookIcon,
@@ -16,8 +17,12 @@ function Contato() {
       </div>
 
       <div className="mx-auto mt-10 flex max-w-4xl flex-col items-center gap-10 md:flex-row md:justify-center">
-        <div className="flex h-40 w-40 shrink-0 items-center justify-center rounded-full bg-white text-center text-xs font-semibold text-brand-navy shadow-xl">
-          Logo Renova Estofados
+        <div className="flex h-40 w-40 shrink-0 items-center justify-center rounded-full bg-white p-1.5 shadow-xl">
+          <img
+            src={logoBadge}
+            alt="Renova Estofados"
+            className="h-full w-full rounded-full object-cover"
+          />
         </div>
 
         <div className="w-full max-w-sm rounded-xl border border-slate-200 bg-white p-6 shadow-sm">

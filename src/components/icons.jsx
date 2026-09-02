@@ -59,6 +59,94 @@ export function ClockIcon({ className }) {
   )
 }
 
+export function SofaIcon({ className }) {
+  return (
+    <Svg className={className}>
+      <path d="M5 12V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5" />
+      <path d="M3 12h18v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" />
+      <path d="M5 17v2" />
+      <path d="M19 17v2" />
+      <rect x="2.5" y="10" width="3" height="4" rx="1" />
+      <rect x="18.5" y="10" width="3" height="4" rx="1" />
+    </Svg>
+  )
+}
+
+export function ArmchairIcon({ className }) {
+  return (
+    <Svg className={className}>
+      <path d="M7 11V8a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3" />
+      <path d="M5 11h14v5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z" />
+      <path d="M7 18v2" />
+      <path d="M17 18v2" />
+      <rect x="2.5" y="10" width="3" height="5" rx="1" />
+      <rect x="18.5" y="10" width="3" height="5" rx="1" />
+    </Svg>
+  )
+}
+
+export function BedIcon({ className }) {
+  return (
+    <Svg className={className}>
+      <path d="M3 18v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3" />
+      <path d="M13 15v-2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5" />
+      <path d="M3 18h18" />
+      <path d="M3 11V6" />
+      <path d="M3 22v-2" />
+      <path d="M21 22v-2" />
+    </Svg>
+  )
+}
+
+export function RugIcon({ className }) {
+  return (
+    <Svg className={className}>
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <rect x="6.5" y="8.5" width="11" height="7" rx="1" />
+      <line x1="3" y1="12" x2="6.5" y2="12" />
+      <line x1="17.5" y1="12" x2="21" y2="12" />
+    </Svg>
+  )
+}
+
+export function SparklesIcon({ className }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5z" />
+      <path d="M19 15l.7 2.1L22 18l-2.3.9L19 21l-.7-2.1L16 18l2.3-.9z" />
+      <path d="M5 15l.6 1.7L7 17l-1.4.6L5 19l-.6-1.4L3 17l1.4-.3z" />
+    </svg>
+  )
+}
+
+export function CheckIcon({ className }) {
+  return (
+    <Svg className={className}>
+      <polyline points="20 6 9 17 4 12" />
+    </Svg>
+  )
+}
+
+export function CalendarIcon({ className }) {
+  return (
+    <Svg className={className}>
+      <rect x="3" y="4" width="18" height="18" rx="2" />
+      <line x1="16" y1="2" x2="16" y2="6" />
+      <line x1="8" y1="2" x2="8" y2="6" />
+      <line x1="3" y1="10" x2="21" y2="10" />
+    </Svg>
+  )
+}
+
+export function ThumbsUpIcon({ className }) {
+  return (
+    <Svg className={className}>
+      <path d="M7 10v12" />
+      <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+    </Svg>
+  )
+}
+
 export function WhatsappIcon({ className }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
