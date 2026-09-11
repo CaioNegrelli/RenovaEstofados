@@ -2,12 +2,345 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/favicon.jpeg" />
+    <link rel="icon" type="image/jpeg" href="assets/logo-badge.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Renova Estofados | Higienização de Estofados</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- Icon sprite (inline so <use> works over file:// too) -->
+    <svg style="display: none" aria-hidden="true">
+      <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+      </symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
+      </symbol>
+      <symbol id="icon-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+        <polyline points="22,6 12,13 2,6" />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </symbol>
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.52 3.48A11.86 11.86 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.6 5.93L0 24l6.35-1.66a11.86 11.86 0 0 0 5.69 1.45h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.24-6.15-3.39-8.45zM12.05 21.5h-.01a9.6 9.6 0 0 1-4.9-1.34l-.35-.21-3.65.96.97-3.56-.23-.36a9.6 9.6 0 0 1-1.47-5.13c0-5.31 4.32-9.63 9.64-9.63 2.57 0 4.99 1 6.8 2.82a9.56 9.56 0 0 1 2.82 6.81c0 5.31-4.32 9.63-9.62 9.63zm5.28-7.22c-.29-.15-1.71-.84-1.98-.94-.27-.1-.46-.15-.66.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.43 0 1.43 1.04 2.81 1.19 3 .15.19 2.05 3.13 4.96 4.39.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z" />
+      </symbol>
+      <symbol id="icon-sofa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5" />
+        <path d="M3 12h18v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" />
+        <path d="M5 17v2" />
+        <path d="M19 17v2" />
+        <rect x="2.5" y="10" width="3" height="4" rx="1" />
+        <rect x="18.5" y="10" width="3" height="4" rx="1" />
+      </symbol>
+      <symbol id="icon-armchair" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 11V8a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3" />
+        <path d="M5 11h14v5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z" />
+        <path d="M7 18v2" />
+        <path d="M17 18v2" />
+        <rect x="2.5" y="10" width="3" height="5" rx="1" />
+        <rect x="18.5" y="10" width="3" height="5" rx="1" />
+      </symbol>
+      <symbol id="icon-bed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 18v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3" />
+        <path d="M13 15v-2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5" />
+        <path d="M3 18h18" />
+        <path d="M3 11V6" />
+        <path d="M3 22v-2" />
+        <path d="M21 22v-2" />
+      </symbol>
+      <symbol id="icon-rug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <rect x="6.5" y="8.5" width="11" height="7" rx="1" />
+        <line x1="3" y1="12" x2="6.5" y2="12" />
+        <line x1="17.5" y1="12" x2="21" y2="12" />
+      </symbol>
+      <symbol id="icon-sparkles" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5z" />
+        <path d="M19 15l.7 2.1L22 18l-2.3.9L19 21l-.7-2.1L16 18l2.3-.9z" />
+        <path d="M5 15l.6 1.7L7 17l-1.4.6L5 19l-.6-1.4L3 17l1.4-.3z" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12" />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
+      </symbol>
+      <symbol id="icon-thumbs-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 10v12" />
+        <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+      </symbol>
+    </svg>
+
+    <header class="header">
+      <div class="header__brand">
+        <img class="header__logo" src="assets/logo-badge.jpeg" alt="Renova Estofados" />
+        <span class="header__name">Renova <span>Estofados</span></span>
+      </div>
+
+      <nav class="header__nav">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="btn btn--navy" href="#contato">Entre em contato conosco</a>
+    </header>
+
+    <main>
+      <!-- Hero ------------------------------------------------------- -->
+      <section id="inicio" class="hero bg-gradient">
+        <span class="hero__bubble" style="left: 8%; top: 2.5rem; width: 4rem; height: 4rem"></span>
+        <span class="hero__bubble" style="left: 20%; top: 8rem; width: 7rem; height: 7rem"></span>
+        <span class="hero__bubble" style="right: 30%; top: 1rem; width: 2.5rem; height: 2.5rem"></span>
+        <span class="hero__bubble" style="right: 10%; bottom: 1.5rem; width: 5rem; height: 5rem"></span>
+        <span class="hero__bubble" style="right: 22%; bottom: 0; width: 3rem; height: 3rem"></span>
+
+        <div class="hero__inner">
+          <div>
+            <h1 class="hero__title">Renova<br />Estofados</h1>
+            <p class="hero__tagline">Mais que limpeza, <span>renovamos</span> seu conforto!</p>
+
+            <div class="hero__actions">
+              <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
+                <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+                Solicitar orçamento
+              </a>
+              <a class="btn btn--outline" href="#servicos">Ver serviços</a>
+            </div>
+          </div>
+
+          <div class="hero__badge">
+            <img src="assets/logo-light.jpeg" alt="Renova Estofados" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Diferenciais ------------------------------------------------ -->
+      <section id="diferenciais" class="container">
+        <h2 class="section-title section-title--green section-title--center section-title--left">Nossos diferenciais</h2>
+
+        <div class="diferenciais">
+          <ul class="diferenciais__list">
+            <li class="diferenciais__item">
+              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+              Tecnologias inovadoras
+            </li>
+            <li class="diferenciais__item">
+              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+              Equipe própria especializada
+            </li>
+            <li class="diferenciais__item">
+              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+              Produtos exclusivos e equipamentos de última geração
+            </li>
+            <li class="diferenciais__item">
+              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+              Atendimento personalizado e cuidadoso
+            </li>
+            <li class="diferenciais__item">
+              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+              Garantia de qualidade em todos os serviços
+            </li>
+            <li class="diferenciais__item">
+              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+              Experiência premium no atendimento pós-venda
+            </li>
+          </ul>
+
+          <div class="diferenciais__art">
+            <svg class="icon"><use href="#icon-sparkles"></use></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quem somos ---------------------------------------------------- -->
+      <section id="sobre" class="bg-slate">
+        <div class="container quem-somos">
+          <div class="quem-somos__badge">
+            <img src="assets/logo-badge.jpeg" alt="Renova Estofados" />
+          </div>
+
+          <div class="quem-somos__text">
+            <h2 class="section-title section-title--green">Quem somos?</h2>
+            <p>
+              Na Renova Estofados, transformamos o seu ambiente trazendo de volta o frescor e o
+              conforto dos seus móveis. Trabalhamos com técnicas avançadas para higienizar e
+              proteger estofados contra sujeiras, manchas e micro-organismos.
+            </p>
+            <ul>
+              <li><strong>Atendimento qualificado:</strong> cuidado com todos os tipos de tecido.</li>
+              <li><strong>Saúde e proteção:</strong> eliminação de ácaros, fungos e bactérias.</li>
+              <li><strong>Renovação completa:</strong> seu estofado limpo, cheiroso e com cara de novo.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicos ------------------------------------------------------- -->
+      <section id="servicos" class="container">
+        <div class="servicos__heading">
+          <span class="servicos__line"></span>
+          <h2 class="section-title section-title--blue">Serviços</h2>
+          <span class="servicos__line"></span>
+        </div>
+
+        <div class="servicos__grid">
+          <div class="card">
+            <div class="card__icon"><svg class="icon"><use href="#icon-sofa"></use></svg></div>
+            <h3>Sofá</h3>
+            <p>Higienização profunda que remove manchas, sujeiras impregnadas e maus odores, devolvendo o conforto e a cor original.</p>
+            <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
+              <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+              Solicitar
+            </a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon"><svg class="icon"><use href="#icon-armchair"></use></svg></div>
+            <h3>Poltrona</h3>
+            <p>Limpeza especializada para poltronas e cadeiras estofadas, eliminando ácaros e bactérias sem danificar o tecido.</p>
+            <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
+              <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+              Solicitar
+            </a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon"><svg class="icon"><use href="#icon-bed"></use></svg></div>
+            <h3>Cama</h3>
+            <p>Sanitização completa para noites de sono mais saudáveis, extraindo poeira, ácaros e alérgenos do colchão e da cabeceira.</p>
+            <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
+              <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+              Solicitar
+            </a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon"><svg class="icon"><use href="#icon-rug"></use></svg></div>
+            <h3>Tapete</h3>
+            <p>Lavagem especializada que remove a sujeira profunda das tramas, renova o toque e realça as cores sem danificar o material.</p>
+            <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
+              <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+              Solicitar
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Como funciona -------------------------------------------------- -->
+      <section id="como-funciona" class="bg-slate">
+        <div class="container">
+          <h2 class="section-title section-title--navy section-title--center">Como funciona</h2>
+
+          <div class="como-funciona__grid">
+            <div class="como-funciona__step">
+              <div class="como-funciona__icon">
+                <svg class="icon"><use href="#icon-calendar"></use></svg>
+                <span class="como-funciona__number">1</span>
+              </div>
+              <h3>Solicite um orçamento</h3>
+              <p>Fale com a gente pelo WhatsApp e conte o que precisa higienizar.</p>
+            </div>
+
+            <div class="como-funciona__step">
+              <div class="como-funciona__icon">
+                <svg class="icon"><use href="#icon-sparkles"></use></svg>
+                <span class="como-funciona__number">2</span>
+              </div>
+              <h3>Agendamos e higienizamos</h3>
+              <p>Nossa equipe vai até você com equipamentos e produtos profissionais.</p>
+            </div>
+
+            <div class="como-funciona__step">
+              <div class="como-funciona__icon">
+                <svg class="icon"><use href="#icon-thumbs-up"></use></svg>
+                <span class="como-funciona__number">3</span>
+              </div>
+              <h3>Aproveite o resultado</h3>
+              <p>Estofado limpo, cheiroso e protegido, com a garantia Renova Estofados.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato --------------------------------------------------------- -->
+      <section id="contato" class="bg-slate">
+        <div class="container">
+          <div class="contato__intro">
+            <h2 class="section-title section-title--blue">Fale Conosco</h2>
+            <p>Entre em contato conosco para mais informações!</p>
+          </div>
+
+          <div class="contato__content">
+            <div class="contato__badge">
+              <img src="assets/logo-badge.jpeg" alt="Renova Estofados" />
+            </div>
+
+            <div class="contato__card">
+              <div class="contato__grid">
+                <div><svg class="icon"><use href="#icon-phone"></use></svg>(XX) XXXXX-XXXX</div>
+                <div><svg class="icon"><use href="#icon-instagram"></use></svg>@RenovaEstofados</div>
+                <div><svg class="icon"><use href="#icon-facebook"></use></svg>Renova Estofados</div>
+                <div><svg class="icon"><use href="#icon-mail"></use></svg>xxxxx@renovaestofados.com</div>
+                <div class="contato__hours">
+                  <svg class="icon"><use href="#icon-clock"></use></svg>
+                  Segunda à Sexta das 8h30 às 18h30 e Sábado das 8h30 às 12h30
+                </div>
+              </div>
+
+              <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
+                <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+                Se preferir, nos chame no Whatsapp. Clique Aqui
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -------------------------------------------------------------- -->
+    <footer class="footer bg-gradient">
+      <div class="footer__grid">
+        <div class="footer__badge">
+          <img src="assets/logo-badge.jpeg" alt="Renova Estofados" />
+        </div>
+
+        <div class="footer__about">
+          <h3>Sobre</h3>
+          <p>
+            Na Renova Estofados, transformamos o seu ambiente trazendo de volta o frescor e o
+            conforto dos seus móveis. Trabalhamos com técnicas avançadas para higienizar e
+            proteger estofados contra sujeiras, manchas e micro-organismos.
+          </p>
+          <p class="footer__cnpj">CNPJ: XX.XXX.XXX/XXXX-XX</p>
+        </div>
+
+        <div class="footer__contacts">
+          <h3>Contatos</h3>
+          <ul>
+            <li><svg class="icon"><use href="#icon-instagram"></use></svg>@RenovaEstofados</li>
+            <li><svg class="icon"><use href="#icon-facebook"></use></svg>Renova Estofados</li>
+            <li><svg class="icon"><use href="#icon-mail"></use></svg>xxxxx@renovaestofados.com</li>
+          </ul>
+          <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
+            Se preferir, nos chame no Whatsapp. Clique Aqui
+          </a>
+        </div>
+      </div>
+
+      <p class="footer__bottom">© 2026 Renova Estofados. Todos os direitos reservados.</p>
+    </footer>
   </body>
 </html>
