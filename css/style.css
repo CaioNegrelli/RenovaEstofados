@@ -800,11 +800,11 @@ button {
 
 .contato__content {
   margin: 2.5rem auto 0;
-  max-width: 56rem;
+  max-width: 64rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3.5rem;
 }
 
 .contato__badge {
@@ -829,7 +829,7 @@ button {
 
 .contato__card {
   width: 100%;
-  max-width: 24rem;
+  max-width: 38rem;
   border: 1px solid var(--slate-200);
   background: var(--white);
   border-radius: 0.75rem;
@@ -840,7 +840,7 @@ button {
 .contato__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem 1.5rem;
+  gap: 1.25rem 2rem;
   font-size: 0.875rem;
   color: var(--navy);
 }
@@ -970,11 +970,6 @@ button {
   .como-funciona__grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .contato__content {
-    flex-direction: row;
-    justify-content: center;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1050,5 +1045,17 @@ button {
 
   .footer__grid {
     grid-template-columns: auto 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* The badge sits stacked above the card up to this point: the card's
+     own max-width already grew (24rem -> 38rem) so every contact line
+     fits on one row, and placing badge + card side by side any earlier
+     than this would make that wider card overflow the section on
+     tablet-width screens. */
+  .contato__content {
+    flex-direction: row;
+    justify-content: center;
   }
 }
