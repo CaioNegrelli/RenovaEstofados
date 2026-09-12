@@ -819,18 +819,22 @@ button {
 
 .contato__card {
   width: 100%;
-  max-width: 38rem;
+  max-width: 46rem;
   border: 1px solid var(--slate-200);
   background: var(--white);
   border-radius: 0.75rem;
-  padding: 1.5rem;
+  padding: 1.25rem;
   box-shadow: var(--shadow-sm);
 }
 
 .contato__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem 2rem;
+  /* Mobile-first: one column so phone/Instagram/Facebook/e-mail/hours
+     always get the card's full width and never fight each other for
+     room. Two columns only kick in once there's enough width for the
+     longest line (the e-mail) to sit comfortably in half the card. */
+  grid-template-columns: 1fr;
+  gap: 1rem 1.5rem;
   font-size: 0.875rem;
   color: var(--navy);
 }
@@ -839,6 +843,15 @@ button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  /* Grid/flex items default to min-width: auto, which keeps them from
+     shrinking below their content's intrinsic width -- for the e-mail
+     that's the whole unbroken string, and it was bleeding past the card
+     edge. overflow-wrap: anywhere (unlike break-word) also counts
+     towards that intrinsic sizing, so this actually lets the row shrink
+     and wrap instead of overflowing. */
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contato__grid .icon {
@@ -959,6 +972,10 @@ button {
 
   .como-funciona__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contato__grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
