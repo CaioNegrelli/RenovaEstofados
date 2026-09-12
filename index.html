@@ -80,6 +80,12 @@
         <path d="M7 10v12" />
         <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
       </symbol>
+      <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6" />
+      </symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6" />
+      </symbol>
     </svg>
 
     <header class="header">
@@ -88,24 +94,81 @@
         <span class="header__name">Renova <span>Estofados</span></span>
       </div>
 
-      <nav class="header__nav">
+      <nav class="header__nav" id="nav-menu">
         <a href="#inicio">Início</a>
         <a href="#sobre">Sobre nós</a>
         <a href="#servicos">Serviços</a>
         <a href="#contato">Contato</a>
       </nav>
 
-      <a class="btn btn--navy" href="#contato">Entre em contato conosco</a>
+      <div class="header__actions">
+        <a class="btn btn--navy" href="#contato">Entre em contato conosco</a>
+        <button
+          class="header__toggle"
+          id="nav-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
 
     <main>
       <!-- Hero ------------------------------------------------------- -->
-      <section id="inicio" class="hero bg-gradient">
-        <span class="hero__bubble" style="left: 8%; top: 2.5rem; width: 4rem; height: 4rem"></span>
-        <span class="hero__bubble" style="left: 20%; top: 8rem; width: 7rem; height: 7rem"></span>
-        <span class="hero__bubble" style="right: 30%; top: 1rem; width: 2.5rem; height: 2.5rem"></span>
-        <span class="hero__bubble" style="right: 10%; bottom: 1.5rem; width: 5rem; height: 5rem"></span>
-        <span class="hero__bubble" style="right: 22%; bottom: 0; width: 3rem; height: 3rem"></span>
+      <section id="inicio" class="hero">
+        <svg class="hero__bubble hero__bubble--1" viewBox="0 0 80 80" style="left: 8%; top: 2.5rem; width: 4rem; height: 4rem">
+          <defs>
+            <radialGradient id="bubbleGradient1" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55" />
+              <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+            </radialGradient>
+          </defs>
+          <circle cx="40" cy="40" r="37" fill="url(#bubbleGradient1)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" />
+        </svg>
+        <svg class="hero__bubble hero__bubble--2" viewBox="0 0 80 80" style="left: 20%; top: 8rem; width: 7rem; height: 7rem">
+          <defs>
+            <radialGradient id="bubbleGradient2" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55" />
+              <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+            </radialGradient>
+          </defs>
+          <circle cx="40" cy="40" r="37" fill="url(#bubbleGradient2)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" />
+        </svg>
+        <svg class="hero__bubble hero__bubble--3" viewBox="0 0 80 80" style="right: 30%; top: 1rem; width: 2.5rem; height: 2.5rem">
+          <defs>
+            <radialGradient id="bubbleGradient3" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55" />
+              <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+            </radialGradient>
+          </defs>
+          <circle cx="40" cy="40" r="37" fill="url(#bubbleGradient3)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" />
+        </svg>
+        <svg class="hero__bubble hero__bubble--4" viewBox="0 0 80 80" style="right: 10%; bottom: 1.5rem; width: 5rem; height: 5rem">
+          <defs>
+            <radialGradient id="bubbleGradient4" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55" />
+              <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+            </radialGradient>
+          </defs>
+          <circle cx="40" cy="40" r="37" fill="url(#bubbleGradient4)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" />
+        </svg>
+        <svg class="hero__bubble hero__bubble--5" viewBox="0 0 80 80" style="right: 22%; bottom: 0; width: 3rem; height: 3rem">
+          <defs>
+            <radialGradient id="bubbleGradient5" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55" />
+              <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+            </radialGradient>
+          </defs>
+          <circle cx="40" cy="40" r="37" fill="url(#bubbleGradient5)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" />
+        </svg>
 
         <div class="hero__inner">
           <div>
@@ -117,7 +180,7 @@
                 <svg class="icon"><use href="#icon-whatsapp"></use></svg>
                 Solicitar orçamento
               </a>
-              <a class="btn btn--outline" href="#servicos">Ver serviços</a>
+              <a class="btn btn--outline-green" href="#servicos">Ver serviços</a>
             </div>
           </div>
 
@@ -129,38 +192,42 @@
 
       <!-- Diferenciais ------------------------------------------------ -->
       <section id="diferenciais" class="container">
-        <h2 class="section-title section-title--green section-title--center section-title--left">Nossos diferenciais</h2>
-
         <div class="diferenciais">
-          <ul class="diferenciais__list">
-            <li class="diferenciais__item">
-              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
-              Tecnologias inovadoras
-            </li>
-            <li class="diferenciais__item">
-              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
-              Equipe própria especializada
-            </li>
-            <li class="diferenciais__item">
-              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
-              Produtos exclusivos e equipamentos de última geração
-            </li>
-            <li class="diferenciais__item">
-              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
-              Atendimento personalizado e cuidadoso
-            </li>
-            <li class="diferenciais__item">
-              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
-              Garantia de qualidade em todos os serviços
-            </li>
-            <li class="diferenciais__item">
-              <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
-              Experiência premium no atendimento pós-venda
-            </li>
-          </ul>
+          <div class="diferenciais__media">
+            <div class="diferenciais__art">
+              <svg class="icon"><use href="#icon-sparkles"></use></svg>
+            </div>
+          </div>
 
-          <div class="diferenciais__art">
-            <svg class="icon"><use href="#icon-sparkles"></use></svg>
+          <div class="diferenciais__content">
+            <h2 class="section-title section-title--green section-title--center section-title--left">Nossos diferenciais</h2>
+
+            <ul class="diferenciais__list">
+              <li class="diferenciais__item">
+                <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+                Tecnologias inovadoras
+              </li>
+              <li class="diferenciais__item">
+                <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+                Equipe própria especializada
+              </li>
+              <li class="diferenciais__item">
+                <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+                Produtos exclusivos e equipamentos de última geração
+              </li>
+              <li class="diferenciais__item">
+                <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+                Atendimento personalizado e cuidadoso
+              </li>
+              <li class="diferenciais__item">
+                <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+                Garantia de qualidade em todos os serviços
+              </li>
+              <li class="diferenciais__item">
+                <span class="diferenciais__check"><svg class="icon"><use href="#icon-check"></use></svg></span>
+                Experiência premium no atendimento pós-venda
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -196,46 +263,63 @@
           <span class="servicos__line"></span>
         </div>
 
-        <div class="servicos__grid">
-          <div class="card">
-            <div class="card__icon"><svg class="icon"><use href="#icon-sofa"></use></svg></div>
-            <h3>Sofá</h3>
-            <p>Higienização profunda que remove manchas, sujeiras impregnadas e maus odores, devolvendo o conforto e a cor original.</p>
-            <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
-              <svg class="icon"><use href="#icon-whatsapp"></use></svg>
-              Solicitar
-            </a>
+        <div class="servicos__carousel">
+          <button class="servicos__arrow servicos__arrow--prev" type="button" aria-label="Serviço anterior">
+            <svg class="icon"><use href="#icon-chevron-left"></use></svg>
+          </button>
+
+          <div class="servicos__track">
+            <article class="card servicos__slide" data-index="0">
+              <div class="card__icon"><svg class="icon"><use href="#icon-sofa"></use></svg></div>
+              <h3>Sofá</h3>
+              <p>Higienização profunda que remove manchas, sujeiras impregnadas e maus odores, devolvendo o conforto e a cor original.</p>
+              <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
+                <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+                Solicitar
+              </a>
+            </article>
+
+            <article class="card servicos__slide" data-index="1">
+              <div class="card__icon"><svg class="icon"><use href="#icon-armchair"></use></svg></div>
+              <h3>Poltrona</h3>
+              <p>Limpeza especializada para poltronas e cadeiras estofadas, eliminando ácaros e bactérias sem danificar o tecido.</p>
+              <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
+                <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+                Solicitar
+              </a>
+            </article>
+
+            <article class="card servicos__slide" data-index="2">
+              <div class="card__icon"><svg class="icon"><use href="#icon-bed"></use></svg></div>
+              <h3>Cama</h3>
+              <p>Sanitização completa para noites de sono mais saudáveis, extraindo poeira, ácaros e alérgenos do colchão e da cabeceira.</p>
+              <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
+                <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+                Solicitar
+              </a>
+            </article>
+
+            <article class="card servicos__slide" data-index="3">
+              <div class="card__icon"><svg class="icon"><use href="#icon-rug"></use></svg></div>
+              <h3>Tapete</h3>
+              <p>Lavagem especializada que remove a sujeira profunda das tramas, renova o toque e realça as cores sem danificar o material.</p>
+              <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
+                <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+                Solicitar
+              </a>
+            </article>
           </div>
 
-          <div class="card">
-            <div class="card__icon"><svg class="icon"><use href="#icon-armchair"></use></svg></div>
-            <h3>Poltrona</h3>
-            <p>Limpeza especializada para poltronas e cadeiras estofadas, eliminando ácaros e bactérias sem danificar o tecido.</p>
-            <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
-              <svg class="icon"><use href="#icon-whatsapp"></use></svg>
-              Solicitar
-            </a>
-          </div>
+          <button class="servicos__arrow servicos__arrow--next" type="button" aria-label="Próximo serviço">
+            <svg class="icon"><use href="#icon-chevron-right"></use></svg>
+          </button>
+        </div>
 
-          <div class="card">
-            <div class="card__icon"><svg class="icon"><use href="#icon-bed"></use></svg></div>
-            <h3>Cama</h3>
-            <p>Sanitização completa para noites de sono mais saudáveis, extraindo poeira, ácaros e alérgenos do colchão e da cabeceira.</p>
-            <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
-              <svg class="icon"><use href="#icon-whatsapp"></use></svg>
-              Solicitar
-            </a>
-          </div>
-
-          <div class="card">
-            <div class="card__icon"><svg class="icon"><use href="#icon-rug"></use></svg></div>
-            <h3>Tapete</h3>
-            <p>Lavagem especializada que remove a sujeira profunda das tramas, renova o toque e realça as cores sem danificar o material.</p>
-            <a class="btn btn--green" href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noreferrer">
-              <svg class="icon"><use href="#icon-whatsapp"></use></svg>
-              Solicitar
-            </a>
-          </div>
+        <div class="servicos__dots" role="tablist" aria-label="Selecionar serviço">
+          <button class="servicos__dot" type="button" aria-label="Sofá"></button>
+          <button class="servicos__dot" type="button" aria-label="Poltrona"></button>
+          <button class="servicos__dot" type="button" aria-label="Cama"></button>
+          <button class="servicos__dot" type="button" aria-label="Tapete"></button>
         </div>
       </section>
 
@@ -342,5 +426,7 @@
 
       <p class="footer__bottom">© 2026 Renova Estofados. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
