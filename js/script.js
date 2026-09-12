@@ -88,9 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const render = () => {
       const spacing = getSpacing();
+      const n = slides.length;
 
       slides.forEach((slide, i) => {
-        const offset = i - active;
+        // Wrap the offset around the circle so the slide right before
+        // `active` shows up on the left instead of trailing off the far
+        // right (e.g. with active = 0, the last slide should sit at -1,
+        // not n - 1) — otherwise the carousel opens with only a right-hand
+        // neighbor visible instead of one on each side.
+        let offset = (i - active) % n;
+        if (offset > n / 2) offset -= n;
+        else if (offset < -n / 2) offset += n;
         const distance = Math.abs(offset);
         const scale = distance === 0 ? 1 : distance === 1 ? 0.82 : 0.68;
         const opacity = distance === 0 ? 1 : distance === 1 ? 0.55 : 0;

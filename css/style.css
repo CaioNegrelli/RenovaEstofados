@@ -234,6 +234,16 @@ button {
   box-shadow: var(--shadow-lg);
 }
 
+/* Long-text CTA (the "Se preferir, nos chame no Whatsapp" buttons): the base
+   .btn keeps its stadium shape + nowrap for short labels, but that overflows
+   past the pill on longer copy, so let this variant wrap onto two lines. */
+.btn--cta {
+  white-space: normal;
+  text-align: center;
+  line-height: 1.35;
+  border-radius: 1.25rem;
+}
+
 .btn--outline {
   background: transparent;
   color: var(--white);
